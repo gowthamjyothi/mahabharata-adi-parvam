@@ -1,0 +1,213 @@
+import { bi } from '../../core/i18n';
+import { record, type CharacterRecord } from './helpers';
+
+/** The elder generations of Hastinapura. */
+export const hastinapurCharacters: readonly CharacterRecord[] = [
+  record('royal', {
+    id: 'shantanu',
+    name: bi('King Shantanu', 'శంతనుడు'),
+    aliases: ['Shantanu', 'Santanu', 'Maharaja Shantanu'],
+    epithets: [bi('Kuru king of the Ganga', 'గంగాతీర కురు రాజు')],
+    lineage: bi('Kuru dynasty, descendant of Bharata and Pratipa.', 'భరత, ప్రతీప వంశీకుడు; కురు రాజు.'),
+    summary: bi(
+      'The king whose two marriages set the Kuru succession and its sorrows in motion.',
+      'రెండు వివాహాలతో కురు వంశ భవిష్యత్తును నిర్ణయించిన రాజు.',
+    ),
+    description: bi(
+      "Shantanu, king of Hastinapura, married the river goddess Ganga on condition that he never question her. When she drowned their seventh son he broke his promise, and she left with the child who would become Bhishma. Old and childless, he fell in love with the fisher-girl Satyavati, and for her sake his son Bhishma renounced both throne and marriage. Shantanu's desires are the root of everything that follows: a crown with no clear heir, and a house divided by promises.",
+      "గంగాదేవిని షరతుతో పెళ్లాడిన శంతనుడు, ఏడో కుమారుడిని ఆమె నదిలో ముంచినప్పుడు మాట తప్పాడు. వృద్ధాప్యంలో సత్యవతిని ప్రేమించగా, ఆమె కోసం భీష్ముడు రాజ్యాన్నీ, వివాహాన్నీ వదులుకున్నాడు. ఆ రెండు ప్రేమలే కురు వంశ విషాదానికి మూలం.",
+    ),
+    relations: { father: ['pratipa'], spouses: ['ganga', 'satyavati'], sons: ['bhishma', 'chitrangada', 'vichitravirya'] },
+    stories: ['sambhava'],
+    art: 'crown',
+  }),
+  record('divine', {
+    id: 'ganga',
+    name: bi('Goddess Ganga', 'గంగాదేవి'),
+    aliases: ['Ganga', 'Goddess Ganga', 'Bhagirathi'],
+    epithets: [bi('The river of heaven', 'స్వర్గనది'), bi('Mother of Bhishma', 'భీష్ముని తల్లి')],
+    lineage: bi('The celestial river, consort of Shantanu.', 'దివ్య నది; శంతనుని భార్య.'),
+    summary: bi(
+      'The river goddess who drowned seven sons to free them, and left the eighth to his father.',
+      'ఏడుగురు కుమారులను విముక్తులను చేయడానికి నదిలో ముంచిన గంగాదేవి.',
+    ),
+    description: bi(
+      "Ganga agreed to marry Shantanu only if he never questioned her. Their sons were the Vasus, cursed to be born as mortals; by drowning them at birth she returned them at once to heaven. When Shantanu stopped her at the eighth child, she spared Devavrata and raised him among the gods, teaching him archery, statecraft and the vows that made him Bhishma. She returns at the end of the epic to receive her son's soul.",
+      "వసువులు శాపంతో మానవులుగా పుట్టారు; పుట్టిన వెంటనే నదిలో ముంచి వారిని తిరిగి స్వర్గానికి పంపింది గంగ. ఎనిమిదో కుమారుడిని శంతనుడు ఆపగా, దేవవ్రతుడు (భీష్ముడు) బతికాడు. అతనికి విద్య, ధనుర్విద్య, ప్రతిజ్ఞలు నేర్పింది.",
+    ),
+    relations: { spouses: ['shantanu'], sons: ['bhishma'] },
+    stories: ['sambhava'],
+    art: 'lotus',
+  }),
+  record('warrior', {
+    id: 'bhishma',
+    name: bi('Bhishma (Devavrata)', 'భీష్ముడు (దేవవ్రతుడు)'),
+    aliases: ['Bhishma', 'Devavrata', 'Gangaputra', 'Bhishma Pitamaha', 'Pitamaha'],
+    epithets: [bi('The grandsire of the Kurus', 'కురువంశ పితామహుడు'), bi('He of the terrible oath', 'భీషణ ప్రతిజ్ఞాధారుడు')],
+    lineage: bi('Son of Shantanu and Ganga; the eldest Kuru of his age.', 'శంతనుడు, గంగల కుమారుడు; కురు వంశ జ్యేష్ఠుడు.'),
+    summary: bi(
+      'The celibate grand-uncle who renounced a throne for his father’s love and guarded the Kuru house to his last arrow.',
+      'తండ్రి ప్రేమ కోసం రాజ్యాన్ని, వివాహాన్ని వదులుకున్న కురు వంశ రక్షకుడు.',
+    ),
+    description: bi(
+      "Devavrata was heir to Hastinapura and a warrior trained by Parashurama himself. When his father wished to marry Satyavati, whose father demanded that her sons rule, Devavrata gave up the crown and swore never to marry, so that no descendant of his could ever claim it. The gods cried out 'Bhishma' — the terrible one — and the name stayed. Bound by his vow to serve whoever sat on the throne, he fought for Duryodhana against the Pandavas he loved, fell on a bed of arrows, and taught dharma from it for eighteen days. He is the epic's great image of the cost of an unbreakable promise.",
+      "శంతనుడు సత్యవతిని పెళ్లాడాలనుకోగా, ఆమె తండ్రి తన కుమారులే రాజు కావాలని షరతు పెట్టాడు. దేవవ్రతుడు రాజ్యం, వివాహం రెండూ వదులుకుని ప్రతిజ్ఞ చేశాడు; దేవతలు 'భీష్మ' అని పిలిచారు. సింహాసనం ఎవరిదైతే వారికి సేవ చేయాలన్న ప్రతిజ్ఞతో, ప్రేమించిన పాండవులకు వ్యతిరేకంగా పోరాడాడు. బాణాల పానుపుపై పడి పద్దెనిమిది రోజులు ధర్మోపదేశం చేశాడు.",
+    ),
+    relations: {
+      father: ['shantanu'],
+      mother: ['ganga'],
+      teachers: ['parashurama'],
+      siblings: ['chitrangada', 'vichitravirya'],
+    },
+    stories: ['sambhava', 'svayamvara'],
+    art: 'bow',
+  }),
+  record('royal', {
+    id: 'satyavati',
+    name: bi('Satyavati (Matsyagandha)', 'సత్యవతి (మత్స్యగంధ)'),
+    aliases: ['Satyavati', 'Matsyagandha', 'Yojanagandha', 'Kali'],
+    epithets: [bi('The fisher-princess', 'మత్స్యకన్య'), bi('Mother of Vyasa', 'వ్యాసుని తల్లి')],
+    lineage: bi('Daughter of a fisherman chief; queen of Hastinapura.', 'పడవేత కులపతి కుమార్తె; హస్తినాపుర మహారాణి.'),
+    summary: bi(
+      'The fisher-girl who became queen, and whose bargain shaped three generations of Kuru kings.',
+      'మత్స్యకన్య నుండి మహారాణి అయి, మూడు తరాల కురు రాజ్యాన్ని నిర్ణయించిన సత్యవతి.',
+    ),
+    description: bi(
+      "Satyavati ferried travellers across the Yamuna and carried the smell of fish until the sage Parashara gave her a son, Vyasa, and with him a fragrant body and her virginity restored. Her father married her to Shantanu on the condition that her children rule, which cost Bhishma his crown. When both her sons died, she called Vyasa to father heirs by her widowed daughters-in-law — the niyoga that produced Dhritarashtra, Pandu and Vidura. Her bargains always work, and always leave a debt.",
+      "యమునా నదిలో పడవ నడిపే సత్యవతికి పరాశర ముని ద్వారా వ్యాసుడు జన్మించాడు; ఆమెకు సువాసన శరీరం, తిరిగి కన్యాత్వం లభించాయి. తన పిల్లలే రాజ్యం పాలించాలన్న షరతుతో శంతనుడిని పెళ్లాడింది. కుమారులు మరణించాక, వ్యాసుని ద్వారా నియోగం చేయించి ధృతరాష్ట్రుడు, పాండుడు, విదురులను పొందింది.",
+    ),
+    relations: { spouses: ['shantanu', 'parashara'], sons: ['veda-vyasa', 'chitrangada', 'vichitravirya'] },
+    stories: ['sambhava'],
+    art: 'crown',
+  }),
+  record('sage', {
+    id: 'parashara',
+    name: bi('Sage Parashara', 'పరాశర ముని'),
+    aliases: ['Parashara', 'Parasara', 'Satyavati’s husband'],
+    epithets: [bi('Father of Vyasa', 'వ్యాసుని తండ్రి')],
+    lineage: bi('Grandson of Vasishtha, son of Shakti.', 'వసిష్ఠుని మనుమడు, శక్తి కుమారుడు.'),
+    summary: bi(
+      'The great seer who met Satyavati by the river and fathered Vyasa.',
+      'నది దగ్గర సత్యవతిని కలిసి వ్యాసునికి జన్మనిచ్చిన మహర్షి.'),
+    description: bi(
+      "Parashara was crossing the Yamuna when he saw Satyavati and asked her to be the mother of his child. She consented on condition that the encounter leave no trace: he granted her fragrance in place of fish-smell and restored her maidenhood, and their son was Krishna Dvaipayana, the future Vyasa. The union links the priestly line of Vasishtha to the Kuru throne.",
+      "యమునా నది దాటుతూ సత్యవతిని చూసి, తన సంతానానికి తల్లి కావాలని అడిగాడు పరాశరుడు. ఆమె షరతులను అంగీకరించి, మత్స్యగంధాన్ని సువాసనగా మార్చి, ఆమె కన్యాత్వాన్ని తిరిగి ఇచ్చాడు. వారి కుమారుడే వేద వ్యాసుడు.",
+    ),
+    relations: { father: ['shakti'], teachers: ['vasishtha'], spouses: ['satyavati'], sons: ['veda-vyasa'] },
+    stories: ['sambhava'],
+    art: 'pot',
+  }),
+  record('royal', {
+    id: 'chitrangada',
+    name: bi('Chitrangada', 'చిత్రాంగదుడు'),
+    aliases: ['Chitrangada', 'Chitrangada Kuru'],
+    epithets: [bi('Elder son of Satyavati', 'సత్యవతి జ్యేష్ఠ కుమారుడు')],
+    lineage: bi('Son of Shantanu and Satyavati, king of Hastinapura.', 'శంతనుడు, సత్యవతుల కుమారుడు; హస్తినాపుర రాజు.'),
+    summary: bi(
+      'The short-lived Kuru king killed in a duel with a Gandharva of the same name.',
+      'తన పేరుతో ఉన్న గంధర్వుడితో ద్వంద్వ యుద్ధంలో మరణించిన రాజు.',
+    ),
+    description: bi(
+      "Chitrangada ruled after Shantanu and was so mighty that only a Gandharva of the same name could match him. Their duel lasted three years and ended with the king's death, leaving the throne to his younger brother Vichitravirya. His early death narrows the Kuru line to a single childless heir.",
+      "శంతనుడి తర్వాత రాజ్యం పాలించిన చిత్రాంగదుడు, అదే పేరున్న గంధర్వుడితో మూడేళ్లు పోరాడి మరణించాడు. దాంతో రాజ్యం తమ్ముడు విచిత్రవీర్యునికి చేరింది.",
+    ),
+    relations: { father: ['shantanu'], mother: ['satyavati'], siblings: ['bhishma', 'vichitravirya'] },
+    stories: ['sambhava'],
+    art: 'crown',
+  }),
+  record('royal', {
+    id: 'vichitravirya',
+    name: bi('Vichitravirya', 'విచిత్రవీర్యుడు'),
+    aliases: ['Vichitravirya', 'Vichitravirya Kuru'],
+    epithets: [bi('The childless king', 'సంతానం లేని రాజు')],
+    lineage: bi('Son of Shantanu and Satyavati; husband of Ambika and Ambalika.', 'శంతనుడు, సత్యవతుల కుమారుడు; అంబిక, అంబాలికల భర్త.'),
+    summary: bi(
+      'The young king who dies of consumption leaving two widows and no heir.',
+      'ఇద్దరు భార్యలను, వారసుడు లేకుండా క్షయవ్యాధితో మరణించిన యువ రాజు.',
+    ),
+    description: bi(
+      "Vichitravirya came to the throne as a boy and was married to the three princesses of Kashi — though Amba, abducted for him, revealed she was already pledged to another and was sent away. Too young to rule and too weak to live, he died of consumption within seven years, childless. His death forces Satyavati to summon Vyasa and begins the niyoga that produces the rival princes.",
+      "బాలుడుగా రాజ్యానికి వచ్చిన విచిత్రవీర్యుడు, కాశీ రాజకుమార్తెలను పెళ్లాడాడు. అంబ ఇతరునికి ఇచ్చిన మాట చెప్పగా ఆమెను పంపివేశారు. ఏడేళ్లలో క్షయవ్యాధితో, సంతానం లేకుండా మరణించాడు; దాంతో సత్యవతి వ్యాసుని పిలిచి నియోగం చేయించింది.",
+    ),
+    relations: {
+      father: ['shantanu'],
+      mother: ['satyavati'],
+      spouses: ['ambika', 'ambalika'],
+      siblings: ['bhishma', 'chitrangada'],
+    },
+    stories: ['sambhava'],
+    art: 'crown',
+  }),
+  record('royal', {
+    id: 'ambika',
+    name: bi('Queen Ambika', 'అంబిక'),
+    aliases: ['Ambika', 'Queen Ambika', 'Elder princess of Kashi'],
+    epithets: [bi('Mother of Dhritarashtra', 'ధృతరాష్ట్రుని తల్లి')],
+    lineage: bi('Elder princess of Kashi, widow of Vichitravirya.', 'కాశీ జ్యేష్ఠ రాజకుమారి; విచిత్రవీర్యుని భార్య.'),
+    summary: bi(
+      'The Kashi princess who closed her eyes in fear of Vyasa, and bore a blind son.',
+      'భయంతో కళ్లు మూసుకున్న కాశీ రాజకుమారి; గ్రుడ్డి కుమారుడు ధృతరాష్ట్రుడిని కన్నది.',
+    ),
+    description: bi(
+      "Ambika was abducted with her sisters to marry Vichitravirya and was widowed almost at once. When Satyavati sent Vyasa to father an heir by niyoga, Ambika was so terrified by the sage's appearance that she shut her eyes — and bore Dhritarashtra, blind from birth. Her fear, not her character, marks her son's fate.",
+      "విచిత్రవీర్యుని మరణానంతరం నియోగం కోసం వ్యాసుడు వచ్చినప్పుడు, అతని రూపానికి భయపడి కళ్లు మూసుకుంది అంబిక; అందుకే కుమారుడు ధృతరాష్ట్రుడు గ్రుడ్డివాడు.",
+    ),
+    relations: { spouses: ['vichitravirya'], sons: ['dhritarashtra'], siblings: ['amba', 'ambalika'] },
+    stories: ['sambhava'],
+    art: 'lotus',
+  }),
+  record('royal', {
+    id: 'ambalika',
+    name: bi('Queen Ambalika', 'అంబాలిక'),
+    aliases: ['Ambalika', 'Queen Ambalika', 'Younger princess of Kashi'],
+    epithets: [bi('Mother of Pandu', 'పాండురాజు తల్లి')],
+    lineage: bi('Younger princess of Kashi, widow of Vichitravirya.', 'కాశీ చిన్న రాజకుమారి; విచిత్రవీర్యుని భార్య.'),
+    summary: bi(
+      'The Kashi princess who turned pale in fear of Vyasa, and bore the pale Pandu.',
+      'భయంతో వెలవెలబోయిన కాశీ రాజకుమారి; పాండురాజును కన్నది.',
+    ),
+    description: bi(
+      "Ambalika obeyed Satyavati's command where her sister had faltered, but went pale with dread at Vyasa's approach. Her son was born with the pallor of her terror — Pandu, the pale king whose curse and piety shape the next generation. Her line continues through the five Pandavas.",
+      "సత్యవతి ఆదేశాన్ని పాటించినా వ్యాసుని చూసి భయంతో వెలవెలబోయింది అంబాలిక. ఆమె కుమారుడే తెల్లని ఛాయతో జన్మించిన పాండురాజు; అతని కుమారులే పంచ పాండవులు.",
+    ),
+    relations: { spouses: ['vichitravirya'], sons: ['pandu'], siblings: ['amba', 'ambika'] },
+    stories: ['sambhava'],
+    art: 'lotus',
+  }),
+  record('warrior', {
+    id: 'parashurama',
+    name: bi('Parashurama', 'పరశురాముడు'),
+    aliases: ['Parashurama', 'Parasurama', 'Jamadagnya', 'Bhargava Rama'],
+    epithets: [bi('The axe-wielding avatar', 'పరశుధారి అవతారం'), bi('The teacher of Bhishma', 'భీష్ముని గురువు')],
+    lineage: bi('Sixth avatar of Vishnu, son of Jamadagni and Renuka.', 'జమదగ్ని, రేణుకల కుమారుడు; విష్ణువు ఆరవ అవతారం.'),
+    summary: bi(
+      'The Brahmin warrior who rid the earth of kings, taught Bhishma, and dueled him at Amba’s plea.',
+      'రాజులను అంతమొందించినా, భీష్మునికి గురువైనా, అంబ కోరికపై అతనితో పోరాడిన అవతారం.',
+    ),
+    description: bi(
+      "Parashurama, the sixth avatar, took up his axe after his father's murder and cleared the earth of Kshatriya kings twenty-one times. He taught archery to Bhishma, but when the princess Amba, whom Bhishma had abducted, came to him for justice, he fought his own student to a standstill at Kurukshetra. The duel lasted years and ended only when the gods and sages begged them to stop. He is the patron of warriors who renounce kingship.",
+      "తండ్రి హత్యకు ప్రతీకారంగా గొడ్డలి పట్టి ఇరవై ఒక్కసార్లు రాజులను అంతమొందించాడు పరశురాముడు. భీష్మునికి విద్య నేర్పాడు; భీష్ముడు ఎత్తుకొచ్చిన అంబ న్యాయం కోరగా, కురుక్షేత్రంలో తన శిష్యుడితోనే సంవత్సరాల పాటు పోరాడాడు.",
+    ),
+    relations: { father: ['jamadagni'], mother: ['renuka'] },
+    stories: ['svayamvara'],
+    art: 'axe',
+  }),
+  record('royal', {
+    id: 'amba',
+    name: bi('Princess Amba', 'అంబ రాజకుమారి'),
+    aliases: ['Amba', 'Amba of Kashi', 'Princess Amba'],
+    epithets: [bi('The princess who was wronged by an oath', 'ప్రతిజ్ఞతో అన్యాయం పొందిన రాజకుమారి')],
+    lineage: bi('Eldest princess of Kashi, brought to Hastinapura for Vichitravirya.', 'కాశీ జ్యేష్ఠ రాజకుమారి; విచిత్రవీర్యునికి తీసుకొచ్చినవారు.'),
+    summary: bi(
+      'The princess abducted for Vichitravirya who died as Shikhandi and brought Bhishma down.',
+      'భీష్ముని పతనానికి కారణమైన శిఖండిగా తిరిగి జన్మించిన రాజకుమారి.',
+    ),
+    description: bi(
+      "Amba and her sisters were carried off by Bhishma to wed the Kuru king, but Amba confessed she was already pledged to the King of Shalva. Sent back, she was rejected as 'given away' by both Shalva and Bhishma, and her life came to ruin. She demanded justice from Parashurama, and when his duel with Bhishma failed, she prayed for the power to kill him and was reborn as Shikhandi, who stood before Bhishma on the tenth day of the war.",
+      "భీష్ముడు తన సోదరీమణులతో తీసుకొచ్చినా, తాను శాల్వ రాజును పెళ్లాడాలని అంబ చెప్పింది. ఇరువురూ ఆమెను తిరస్కరించారు. పరశురాముని సహాయం కూడా ఫలించలేదు; చివరకు భీష్ముని చంపే శక్తి కోసం ప్రార్థించి శిఖండిగా పుట్టింది.",
+    ),
+    relations: { father: ['kashi-king'], siblings: ['ambika', 'ambalika'], teachers: ['parashurama'] },
+    stories: ['sambhava', 'svayamvara'],
+    art: 'flame',
+  }),
+];

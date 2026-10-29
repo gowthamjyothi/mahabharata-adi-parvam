@@ -1,0 +1,260 @@
+import { bi } from '../../core/i18n';
+import { record, type CharacterRecord } from './helpers';
+
+/**
+ * The frame story: how the Bharata was told, written and finally recited.
+ * Adi Parva opens here, in the court of Janamejaya's snake sacrifice.
+ */
+export const framingCharacters: readonly CharacterRecord[] = [
+  record('sage', {
+    id: 'veda-vyasa',
+    name: bi('Veda Vyasa', 'వేద వ్యాసుడు'),
+    aliases: ['Vyasa', 'Krishna Dvaipayana', 'Badarayana', 'Vyasadeva', 'Dwaipayana'],
+    epithets: [bi('The compiler of the Vedas', 'వేదాలను విభజించినవాడు'), bi('Author of the Bharata', 'భారత రచయిత')],
+    lineage: bi('Son of Sage Parashara and Satyavati, born on an island in the Yamuna.', 'పరాశర మహర్షి మరియు సత్యవతి కుమారుడు; యమునా నదిలోని ద్వీపంలో జన్మించాడు.'),
+    summary: bi(
+      'The sage who divided the Vedas and composed the Mahabharata — the ancestor, witness and scribe of the whole epic.',
+      'వేదాలను విభజించి, మహాభారతాన్ని రచించిన మహర్షి — ఇతిహాసానికి పూర్వీకుడు, సాక్షి మరియు రచయిత.',
+    ),
+    description: bi(
+      "Born to Satyavati before her marriage to Shantanu, the dark-complexioned child was named Krishna Dvaipayana — Krishna for his colour, Dvaipayana for the island of his birth. He mastered the Vedas and, seeing that human memory could no longer hold them whole, divided them into four and gave each to a disciple, earning the title Vyasa, 'the arranger'. Knowing the age of Kali would erode righteousness, he composed the Bharata in a hundred thousand verses and taught it to his son Shuka and to five disciples, chief among them Vaishampayana. In the epic he is not merely author but actor: at his mother's command he fathered Dhritarashtra, Pandu and Vidura by niyoga, and he watches his descendants destroy themselves with the grief of a man who has read the last page before writing the first.",
+      "శంతనుతో వివాహానికి ముందు సత్యవతికి జన్మించిన నల్లని బిడ్డ కృష్ణ ద్వైపాయనుడు — రంగు కారణంగా కృష్ణుడు, జన్మద్వీపం కారణంగా ద్వైపాయనుడు. వేదాలను నాలుగు భాగాలుగా విభజించి శిష్యులకు అప్పగించాడు; అందుకే 'వ్యాసుడు' (ఏర్పాటు చేసినవాడు) అనే పేరు. కలియుగంలో ధర్మం క్షీణిస్తుందని తెలిసి లక్ష శ్లోకాలతో భారతాన్ని రచించి, కుమారుడు శుకుడికీ, వైశంపాయనుడు మొదలైన శిష్యులకూ బోధించాడు. ఈ ఇతిహాసంలో అతను రచయిత మాత్రమే కాదు — తల్లి ఆజ్ఞతో నియోగం ద్వారా ధృతరాష్ట్రుడు, పాండుడు, విదురులకు తండ్రి అయ్యాడు.",
+    ),
+    relations: { father: ['parashara'], mother: ['satyavati'], sons: ['dhritarashtra', 'pandu', 'vidura'] },
+    stories: ['anukramanika', 'parvasangrahana', 'sambhava'],
+    art: 'scroll',
+  }),
+  record('divine', {
+    id: 'ganesha',
+    name: bi('Lord Ganesha', 'గణేశుడు'),
+    aliases: ['Ganapati', 'Vinayaka', 'Ganesh', 'Ekadanta', 'Vighneshwara'],
+    epithets: [bi('Remover of obstacles', 'విఘ్నాలను తొలగించేవాడు'), bi('The first scribe', 'మొదటి లేఖకుడు')],
+    lineage: bi('Son of Lord Shiva and Goddess Parvati; the elephant-headed lord of beginnings.', 'శివుడు మరియు పార్వతి కుమారుడు; ఏనుగు ముఖం కలిగిన ఆది దేవుడు.'),
+    summary: bi(
+      'The elephant-headed god who agreed to write the epic as Vyasa dictated it, with one unbreakable condition.',
+      'వ్యాసుడు చెప్పగా ఇతిహాసాన్ని వ్రాసిన ఏనుగు ముఖ దేవుడు — ఒక షరతుతో.',
+    ),
+    description: bi(
+      "When Vyasa searched for a scribe worthy of the Bharata, Brahma named Ganesha. The god agreed to write without pausing, but Vyasa countered with his own condition: that Ganesha understand each verse before setting it down. Hence the epic was dictated in a dense, knotty style and Ganesha's pen broke under the strain; he snapped off his own tusk and wrote on, which is why he is called Ekadanta, 'the one-tusked'. This little scene is the epic's first lesson — even divine writing requires attention, patience and sacrifice.",
+      "భారతాన్ని వ్రాయగల లేఖకుడిని వ్యాసుడు వెతుకుతుండగా బ్రహ్మ గణేశుడిని సూచించాడు. ఆగకుండా వ్రాస్తానని గణేశుడు అంగీకరించగా, ప్రతి శ్లోకాన్ని అర్థం చేసుకుని వ్రాయాలని వ్యాసుడు షరతు పెట్టాడు. ఆ ఒత్తిడిలో కలం విరిగిపోగా, తన దంతాన్ని తనే విరిచి వ్రాసుకుంటూ పోయాడు — అందుకే 'ఏకదంతుడు'.",
+    ),
+    relations: { mother: ['parvati'], father: ['shiva'] },
+    stories: ['anukramanika'],
+    art: 'scroll',
+  }),
+  record('bard', {
+    id: 'sauti',
+    name: bi('Ugrasrava Sauti', 'ఉగ్రశ్రవస్ సౌతి'),
+    aliases: ['Sauti', 'Ugrasravas', 'Ugrashrava'],
+    epithets: [bi('The bard of the Naimisha forest', 'నైమిశారణ్య కథకుడు')],
+    lineage: bi('Son of Lomaharshana, a disciple of Vyasa.', 'వ్యాసుని శిష్యుడైన లోమహర్షణ కుమారుడు.'),
+    summary: bi(
+      'The wandering bard who carries the epic from the snake sacrifice to the sages of Naimisha.',
+      'సర్పయాగం నుండి నైమిశారణ్య ఋషుల వరకు ఇతిహాసాన్ని మోసుకెళ్లిన కథకుడు.',
+    ),
+    description: bi(
+      'Sauti is the voice the reader actually hears. Arriving at the twelve-year sacrifice of Shaunaka in the Naimisha forest, he is asked how the great war came to be, and he answers by repeating what Vaishampayana once recited at Janamejaya’s snake sacrifice. A sutra by birth — the son of a bard and charioteer lineage — he travels from court to court carrying genealogies, law and story in memory. The epic is thus a box within a box: Vyasa composed it, Vaishampayana recited it, Sauti repeats it, and we listen over his shoulder.',
+      "సౌతి వల్లనే మనం ఇతిహాసాన్ని వింటున్నాం. నైమిశారణ్యంలో శౌనకుడి పన్నెండేళ్ల యాగానికి వచ్చి, మహాభారత యుద్ధం ఎలా జరిగిందని అడిగిన ఋషులకు, జనమేజయుని సర్పయాగంలో వైశంపాయనుడు చెప్పిన కథను తిరిగి చెబుతాడు. పురాణాలు, వంశావళులు, ధర్మశాస్త్రం — అన్నీ కంఠస్థం చేసుకుని రాజసభల నుండి అడవుల వరకు తిరిగే కథకుడు.",
+    ),
+    relations: { father: ['lomaharshana'], teachers: ['vaishampayana'] },
+    stories: ['anukramanika', 'parvasangrahana'],
+    art: 'scroll',
+  }),
+  record('sage', {
+    id: 'shaunaka',
+    name: bi('Shaunaka Kulapati', 'శౌనక కులపతి'),
+    aliases: ['Shaunaka', 'Kulapati Shaunaka'],
+    epithets: [bi('Host of the twelve-year sacrifice', 'పన్నెండేళ్ల యాగాధిపతి')],
+    lineage: bi('A great householder-sage of the Naimisha forest.', 'నైమిశారణ్య మహర్షి, కులపతి.'),
+    summary: bi(
+      'The elderly sage who hosts the sacrifice where the Mahabharata is retold for the sages of the forest.',
+      'అడవి ఋషులకు మహాభారతాన్ని వినిపించిన యాగానికి అధిపతి.',
+    ),
+    description: bi(
+      'Shaunaka Kulapati, head of a vast clan of sages, keeps a twelve-year sacrifice burning in the Naimisha forest. When Sauti arrives, the assembled hermits ask him the questions that open the epic: who were the Kurus, why did they fight, and what is the fruit of hearing this tale? Shaunaka is the ideal listener — learned, patient and hungry for narrative — and his questions give the poem its shape.',
+      "నైమిశారణ్యంలో పన్నెండేళ్ల యాగాన్ని నిర్వహిస్తున్న శౌనక కులపతి వద్దకు సౌతి వచ్చినప్పుడు, కురువంశం ఎవరు, యుద్ధం ఎందుకు జరిగింది అని ఋషులు అడుగుతారు. ఆ ప్రశ్నలతోనే ఇతిహాసానికి రూపం వస్తుంది.",
+    ),
+    relations: {},
+    stories: ['anukramanika', 'parvasangrahana'],
+    art: 'flame',
+  }),
+  record('sage', {
+    id: 'vaishampayana',
+    name: bi('Vaishampayana', 'వైశంపాయనుడు'),
+    aliases: ['Vaishampayana', 'Vaisampayana'],
+    epithets: [bi('Vyasa’s chief disciple', 'వ్యాసుని ప్రధాన శిష్యుడు')],
+    lineage: bi('Disciple of Vyasa, born of his lineage of pupils.', 'వ్యాసుని శిష్యుడు.'),
+    summary: bi(
+      'The disciple who first recited the Bharata aloud, at Janamejaya’s snake sacrifice.',
+      'జనమేజయుని సర్పయాగంలో తొలిసారిగా భారతాన్ని వినిపించిన శిష్యుడు.',
+    ),
+    description: bi(
+      "Vyasa taught the Bharata to his son Shuka and to four disciples; Vaishampayana was the one ordered to carry it to the world. At the snake sacrifice he recites the epic to King Janamejaya in answer to his questions about his ancestors, and it is his recitation that Sauti later repeats. Every 'Janamejaya said' and 'Vaishampayana said' in the text marks the two voices inside the frame.",
+      "వ్యాసుడు తన భారతాన్ని శుకుడికి, నలుగురు శిష్యులకు బోధించగా, ప్రపంచానికి చేరవేయాలని ఆదేశించినవాడు వైశంపాయనుడు. సర్పయాగంలో జనమేజయుడికి ఇతిహాసాన్ని చెప్పాడు; ఆ మాటలనే సౌతి తర్వాత పునరావృతం చేస్తాడు.",
+    ),
+    relations: { teachers: ['veda-vyasa'] },
+    stories: ['anukramanika', 'astika', 'sambhava'],
+    art: 'scroll',
+  }),
+  record('royal', {
+    id: 'janamejaya',
+    name: bi('King Janamejaya', 'జనమేజయుడు'),
+    aliases: ['Janamejaya', 'Janamejaya Paurava'],
+    epithets: [bi('The snake-sacrificing king', 'సర్పయాగం చేసిన రాజు')],
+    lineage: bi('Great-grandson of Arjuna; son of Parikshit, of the Kuru line.', 'అర్జునుని మునిమనుమడు; పరీక్షిత్తు కుమారుడు, కురువంశ రాజు.'),
+    summary: bi(
+      'The Kuru emperor whose vengeance sets off the sacrifice at which the Mahabharata is told.',
+      'ప్రతీకారాగ్నితో సర్పయాగం చేసి, ఆ యాగంలోనే మహాభారతాన్ని విన్న కురు చక్రవర్తి.',
+    ),
+    description: bi(
+      "Janamejaya inherited the throne of Hastinapura after his father Parikshit died of a snakebite. Urged by the sage Utanka, he resolved to burn every serpent in creation and began the Sarpa Satra, a sacrifice so powerful that snakes fell into the fire from the ends of the earth. When Takshaka fled to Indra's lap, the king's priests dragged even the god's protector into the flames. Only the young sage Astika's plea — and a boon owed to his mother's line — stopped the slaughter. At that same sacrifice Vaishampayana recited the story of Janamejaya's ancestors, so that the king learned of the war that made his dynasty.",
+      "తండ్రి పరీక్షిత్తు సర్పదష్టుడై మరణించగా, ఉతంకుని ప్రేరణతో జనమేజయుడు సర్పయాగం ప్రారంభించాడు. తక్షకుడు ఇంద్రుని ఒడిలో దాక్కున్నా, ఆ దేవేంద్రుడితో సహా అగ్నిలోకి లాగించాడు. ఆస్తికుడి విజ్ఞప్తితో యాగం ఆగింది. అదే యాగంలో వైశంపాయనుడు పూర్వీకుల కథను వినిపించాడు.",
+    ),
+    relations: { father: ['parikshit'], mother: ['madravati'], sons: ['shatanika'] },
+    stories: ['anukramanika', 'astika'],
+    art: 'crown',
+  }),
+  record('royal', {
+    id: 'parikshit',
+    name: bi('King Parikshit', 'పరీక్షిత్తు'),
+    aliases: ['Parikshit', 'Parikshita'],
+    epithets: [bi('The posthumous king', 'తండ్రి మరణానంతరం జన్మించిన రాజు')],
+    lineage: bi('Son of Abhimanyu and Uttara; the sole surviving heir of the Pandavas.', 'అభిమన్యుడు మరియు ఉత్తర ల కుమారుడు; పాండవ వంశానికి మిగిలిన ఏకైక వారసుడు.'),
+    summary: bi(
+      'The infant king saved in his mother’s womb; his death by snakebite begins the whole telling.',
+      'తల్లి గర్భంలో రక్షింపబడిన రాజు; అతని సర్పదష్ట మరణంతోనే కథ ప్రారంభమవుతుంది.',
+    ),
+    description: bi(
+      "Parikshit was born after the war, when Ashwatthama's weapon struck his mother Uttara's womb and Krishna alone saved the child. A just and beloved ruler, he once went hunting, grew thirsty, and asked the silent sage Shamika for water. Offended by the sage's silence, he draped a dead snake on his shoulder and left. Shringi's curse doomed him to die in seven days by Takshaka's bite. Parikshit spent those days listening to the Bhagavata on the Ganges bank, and his son Janamejaya's grief would later fuel the snake sacrifice.",
+      "యుద్ధం తర్వాత అశ్వత్థామ ఆయుధం ఉత్తర గర్భాన్ని తాకగా, కృష్ణుడు రక్షించిన శిశువే పరీక్షిత్తు. వేటలో అలసి మౌనంగా ఉన్న శమీక మునిని అవమానించి, చచ్చిన పామును భుజంపై వేశాడు. శృంగి శాపాన ఏడు రోజుల్లో తక్షకుడి కాటుతో మరణించాడు. అతని మరణమే జనమేజయుని సర్పయాగానికి కారణం.",
+    ),
+    relations: { father: ['abhimanyu'], mother: ['uttara'], sons: ['janamejaya'], teachers: ['shuka'] },
+    stories: ['astika'],
+    art: 'crown',
+  }),
+  record('sage', {
+    id: 'shamika',
+    name: bi('Sage Shamika', 'శమీక ముని'),
+    aliases: ['Shamika', 'Shamika Rishi'],
+    epithets: [bi('The forgiving hermit', 'క్షమాగుణం కలిగిన ముని')],
+    lineage: bi('A hermit of the forest near Parikshit’s hunting grounds.', 'పరీక్షిత్తు వేటాడిన అడవిలోని ఆశ్రమవాసి.'),
+    summary: bi(
+      'The silent sage insulted by Parikshit with a dead snake; he forgave, but his son did not.',
+      'పరీక్షిత్తు చచ్చిన పాముతో అవమానించిన ముని; అతను క్షమించాడు, కుమారుడు క్షమించలేదు.',
+    ),
+    description: bi(
+      "Shamika was observing a vow of silence when the exhausted king arrived, so he neither rose nor offered water. Parikshit, enraged, hung a dead snake on the old man's shoulders. Shamika's disciple Shringi, returning to find his father insulted, cursed the king to die within seven days. The sage rebuked his son for the curse but could not recall it, and sent word to Parikshit so that the king might prepare his soul. His forbearance and his son's fury together form the hinge of the entire epic.",
+      "మౌనవ్రతం చేపట్టిన శమీకుడు రాజు రాగానే లేవలేదు, నీళ్లు ఇవ్వలేదు. కోపించిన పరీక్షిత్తు చచ్చిన పామును అతని భుజంపై వేశాడు. శిష్యుడు శృంగి రాజుకు ఏడు రోజుల మరణ శాపం విధించాడు. ముని కుమారుడిని మందలించినా శాపం తిరిగి తీసుకోలేకపోయాడు.",
+    ),
+    relations: { sons: ['shringi'] },
+    stories: ['astika'],
+    art: 'lotus',
+  }),
+  record('sage', {
+    id: 'shringi',
+    name: bi('Shringi', 'శృంగి'),
+    aliases: ['Shringi', 'Rishi Shringi', 'Shringin'],
+    epithets: [bi('The hot-tempered son', 'ఆవేశప్రవృత్తి కల కుమారుడు')],
+    lineage: bi('Son of Sage Shamika.', 'శమీక ముని కుమారుడు.'),
+    summary: bi(
+      'The young ascetic whose curse sentenced a king to die by snakebite in seven days.',
+      'రాజుకు ఏడు రోజుల్లో సర్పదష్ట మరణం కలగాలని శపించిన యువ తపస్వి.',
+    ),
+    description: bi(
+      "Shringi was a boy of fierce tapas and fiercer loyalty. Finding his father with a dead snake on his shoulders, he poured water on the ground in the rite of cursing and declared that Parikshit would die of Takshaka's bite within seven days. When Shamika protested that a sage must forgive, Shringi answered that a son must avenge. The curse could not be undone, and the boy's anger became the first domino of the Mahabharata's frame story.",
+      "తండ్రి భుజంపై చచ్చిన పామును చూసి, శృంగి శాపోదకం పోసి, పరీక్షిత్తు ఏడు రోజుల్లో తక్షకుడి కాటుతో మరణిస్తాడని శపించాడు. క్షమించమని తండ్రి చెప్పినా వినలేదు. ఆ శాపమే ఇతిహాస కథకు మొదటి గడియ.",
+    ),
+    relations: { father: ['shamika'] },
+    stories: ['astika'],
+    art: 'flame',
+  }),
+  record('serpent', {
+    id: 'takshaka',
+    name: bi('Takshaka', 'తక్షకుడు'),
+    aliases: ['Takshaka', 'Takshak', 'Naga Takshaka'],
+    epithets: [bi('King of the Nagas', 'నాగరాజు'), bi('The biter of Parikshit', 'పరీక్షిత్తును కరచినవాడు')],
+    lineage: bi('A Naga king of the race of Kadru, dwelling in Khandava and later in Takshashila.', 'కద్రువ వంశానికి చెందిన నాగరాజు; ఖాండవ వనవాసి.'),
+    summary: bi(
+      'The serpent king who killed Parikshit, lost his forest to Agni, and barely escaped Janamejaya’s fire.',
+      'పరీక్షిత్తును కరచి, ఖాండవ దహనంలో అడవిని కోల్పోయి, జనమేజయుని అగ్ని నుండి తప్పించుకున్న నాగరాజు.',
+    ),
+    description: bi(
+      "Takshaka is the epic's most political serpent. Warned that a snake would end Parikshit's life, the king took refuge in a tower guarded by physicians; Takshaka sent his serpents in disguise, entered the fruit the king was about to eat, and struck. Later, when the Pandavas burned the Khandava forest, Takshaka was away and his family perished, though his son Ashvasena escaped with his mother. At Janamejaya's sacrifice he fled to Indra and was saved only because Astika asked that the slaughter end. He is uncle to Astika through his sister Jaratkaru.",
+      "పరీక్షిత్తును కరవాలని వచ్చిన తక్షకుడు, వైద్యుల మధ్య ఉన్న రాజు దగ్గరకు పండులో దాక్కుని కరచాడు. ఖాండవ దహన సమయంలో తన కుటుంబాన్ని కోల్పోయాడు; కుమారుడు అశ్వసేనుడు తల్లితో తప్పించుకున్నాడు. జనమేజయుని యాగంలో ఇంద్రుని ఒడికి పారిపోయి, ఆస్తికుడి విజ్ఞప్తితో బతికాడు.",
+    ),
+    relations: { siblings: ['jaratkaru-naga'], sons: ['ashvasena'] },
+    stories: ['astika', 'khandava-daha', 'sambhava'],
+    art: 'serpent',
+  }),
+  record('sage', {
+    id: 'utanka',
+    name: bi('Sage Utanka', 'ఉతంక ముని'),
+    aliases: ['Utanka', 'Uddalaka’s pupil Utanka'],
+    epithets: [bi('The sage who demanded vengeance', 'ప్రతీకారం కోరిన ముని')],
+    lineage: bi('A disciple of the teacher Ayoda-Dhaumya.', 'ఆయోద-ధౌమ్యుని శిష్యుడు.'),
+    summary: bi(
+      'The sage who urged Janamejaya to avenge Parikshit by burning every snake.',
+      'పరీక్షిత్తు మరణానికి ప్రతీకారంగా సర్పయాగం చేయమని జనమేజయునికి చెప్పిన ముని.',
+    ),
+    description: bi(
+      "Utanka served his guru for years and was sent into the world with a hard-won gift of earrings for his guru's wife. On the road the earrings were stolen by a Naga, and Utanka pursued them into the serpent world, recovering them with the help of a horse-headed fire and a demon. Hearing that Takshaka had killed Parikshit, he went to Janamejaya and demanded the snake sacrifice — the act that makes the epic's narration possible.",
+      "గురుపత్నికి కర్ణాభరణాలు తీసుకొచ్చే క్రమంలో ఒక నాగుడు వాటిని దొంగిలించాడు. నాగలోకం వరకు వెళ్లి తిరిగి సంపాదించాడు. తక్షకుడు పరీక్షిత్తును చంపాడని తెలిసి, జనమేజయుడిని సర్పయాగానికి ప్రేరేపించాడు.",
+    ),
+    relations: { teachers: ['ayoda-dhaumya'] },
+    stories: ['astika'],
+    art: 'flame',
+  }),
+  record('sage', {
+    id: 'astika',
+    name: bi('Astika', 'ఆస్తికుడు'),
+    aliases: ['Astika', 'Astika Muni'],
+    epithets: [bi('The child who stopped the sacrifice', 'యాగాన్ని ఆపిన బాలుడు')],
+    lineage: bi('Son of the ascetic Jaratkaru and the Naga princess Jaratkaru; related to Takshaka.', 'జరత్కారు ముని మరియు నాగ కన్య జరత్కారుల కుమారుడు; తక్షకుని మేనల్లుడు.'),
+    summary: bi(
+      'The brilliant boy, learned from birth, who persuaded Janamejaya to end the snake sacrifice.',
+      'పుట్టుకతోనే విద్యావంతుడైన బాలుడు; జనమేజయుని సర్పయాగాన్ని ఆపించాడు.',
+    ),
+    description: bi(
+      "Astika was born to save the serpents. His father Jaratkaru wed only to prevent his ancestors from falling into hell, and his mother was Takshaka's sister; the Nagas hoped the child would protect them. Legend says he spoke the Vedas from his cradle. When Janamejaya's fire pulled snakes from every corner of the world, Astika stepped before the king and praised sacrifice, mercy and family, asking that the slaughter of an innocent race end. Janamejaya granted the boon, the fire cooled, and the serpents were saved.",
+      "నాగులను రక్షించడానికే ఆస్తికుడు జన్మించాడు. తండ్రి జరత్కారు పితృఋణం తీర్చుకోవడానికి వివాహం చేసుకోగా, తల్లి తక్షకుని సోదరి. ఉయ్యాలలోనే వేదాలు చెప్పాడని చెబుతారు. సర్పయాగాగ్ని ప్రజ్వలించినప్పుడు రాజు ముందు నిలిచి, ధర్మం, దయ, వంశరక్షణ గురించి బోధించి యాగాన్ని ఆపించాడు.",
+    ),
+    relations: { father: ['jaratkaru-ascetic'], mother: ['jaratkaru-naga'], teachers: ['jaratkaru-ascetic'] },
+    stories: ['astika'],
+    art: 'lotus',
+  }),
+  record('sage', {
+    id: 'jaratkaru-ascetic',
+    name: bi('Jaratkaru (Ascetic)', 'జరత్కారు (ముని)'),
+    aliases: ['Jaratkaru', 'Rishi Jaratkaru', 'Jaratkaru Muni'],
+    epithets: [bi('The ascetic who married to save his ancestors', 'పితృరుణం తీర్చుకోవడానికి వివాహం చేసుకున్న ముని')],
+    lineage: bi('Of the line of the sage Yayavara.', 'యాయావర మహర్షి వంశం.'),
+    summary: bi(
+      'A fierce ascetic who married a Naga princess solely to rescue his ancestors from hell.',
+      'పితృదేవతలను నరకం నుండి రక్షించడానికే నాగ కన్యను పెళ్లాడిన కఠోర తపస్వి.'),
+    description: bi(
+      "Jaratkaru practised such severe austerities that he had abandoned all thought of family. Descending into a pit, he found his ancestors hanging by a thread, weeping that his childlessness would plunge their line into hell. He consented to marry, but only a bride who shared his name and would accept his conditions — including that he would leave if she ever displeased him. The Nagas offered him Jaratkaru, Takshaka's sister, and their son Astika redeemed the ancestors.",
+      "కఠోర తపస్సు చేస్తూ సంసారాన్ని వదిలిన జరత్కారు, ఒక గుండం లో తన పితృదేవతలు కన్నీళ్లతో వేలాడుతూ, తన సంతానం లేకుంటే వారు నరకానికి పోతారని చెప్పడం విన్నాడు. తన పేరు, తన షరతులను అంగీకరించిన కన్యను మాత్రమే పెళ్లాడతానని చెప్పగా నాగులు జరత్కారును ఇచ్చారు.",
+    ),
+    relations: { spouses: ['jaratkaru-naga'], sons: ['astika'] },
+    stories: ['astika'],
+    art: 'flame',
+  }),
+  record('serpent', {
+    id: 'jaratkaru-naga',
+    name: bi('Jaratkaru (Naga Princess)', 'జరత్కారు (నాగ కన్య)'),
+    aliases: ['Jaratkaru Naga', 'Naga Jaratkaru', 'Sister of Takshaka'],
+    epithets: [bi('Mother of Astika', 'ఆస్తికుని తల్లి')],
+    lineage: bi('Daughter of the Naga king, sister of Takshaka.', 'నాగరాజు కుమార్తె, తక్షకుని సోదరి.'),
+    summary: bi(
+      'The Naga princess married to a harsh ascetic so that her race might have a saviour.',
+      'తన జాతిని రక్షించే సంతానం కోసం కఠోర మునిని పెళ్లాడిన నాగ కన్య.',
+    ),
+    description: bi(
+      "The Nagas, foreseeing Janamejaya's sacrifice, sought a child who could stop it. Jaratkaru was chosen because she bore the ascetic's name and could endure his temper. Their marriage was tense: when she once woke him too early, he prepared to leave, and she had to remind him that their son was yet unborn. Astika was born, and with him the deliverance of the serpents. Her patience is the quiet virtue that balances her brother's pride.",
+      "రాబోయే సర్పయాగాన్ని ఊహించిన నాగులు, దాన్ని ఆపగల సంతానం కోసం జరత్కారు మునిని పెళ్లాడమని ఈ నాగ కన్యను పంపారు. భర్త మనస్తత్వాన్ని సహించి, కుమారుడు ఆస్తికుడిని కని, నాగజాతికి రక్షణ కల్పించింది.",
+    ),
+    relations: { siblings: ['takshaka'], spouses: ['jaratkaru-ascetic'], sons: ['astika'] },
+    stories: ['astika'],
+    art: 'serpent',
+  }),
+];
